@@ -1,0 +1,604 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box;
+}
+
+/* Basic styling for the layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+}
+
+/* Full page background images */
+body.background-1 {
+    background-image: url('images/image1.jpg');
+}
+body.background-2 {
+    background-image: url('images/image2.jpg');
+}
+body.background-3 {
+    background-image: url('images/image3.jpg');
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px; /* Reduced padding in header */
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Reduced margin */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 10px; /* Reduced padding for smaller navbar */
+}
+
+.user-options {
+    padding: 10px 15px; /* Padding for the dropdown */
+    background-color: #333; /* Same background color as buttons */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 14px; /* Font size */
+    appearance: none; /* Remove default styling */
+    outline: none; /* Remove outline */
+    margin-left: 15px; /* Space between buttons and dropdown */
+}
+
+
+.user-options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align items in a row */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.user-options ul li {
+    margin-left: 15px; /* Space between buttons */
+}
+
+.user-button {
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #333; /* Background color for buttons */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.user-button:hover {
+    background-color: #555; /* Change background color on hover */
+}
+
+.icons {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center vertically */
+}
+
+.icons img {
+    width: 25px; /* Set width for icons */
+    margin-left: 15px; /* Space between icons */
+    filter: brightness(0) invert(1); /* Make icons white */
+}
+
+.language-select {
+    padding: 10px 15px; /* Padding for the dropdown */
+    background-color: #333; /* Same background color as buttons */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 14px; /* Font size */
+    appearance: none; /* Remove default styling */
+    outline: none; /* Remove outline */
+    margin-left: 15px; /* Space between buttons and dropdown */
+}
+
+.search-bar {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc; /* Optional: add border to the input */
+    border-radius: 4px; /* Optional: add border radius */
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    margin-left: 10px; /* Space between search input and button */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    flex: 1; /* Allow main to grow */
+}
+
+.intro-text {
+    text-align: center; /* Center the text */
+    font-size: 18px; /* Font size */
+    margin-bottom: 20px; /* Space below the paragraph */
+    color: white; /* Text color */
+    background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+    padding: 10px; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.shop-now {
+    padding: 20px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+/* Footer styles */
+/* Footer CSS */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 1px;
+    border-bottom: 5px solid #fd0000;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 1px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-section .social-media {
+    margin-top: 15px;
+}
+
+.footer-section .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-section .social-media img {
+    width: 30px;
+    height: 30px;
+    
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 15px 0;
+    font-size: 12px;
+    color: #bbb;
+    position: relative;
+}
+
+
+footer .social-media img {
+    width: 30px;
+    margin: 0 10px;
+}
+/* Full page background images */
+body {
+    background-size: cover; /* Ensures the background image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+body.background-1 {
+    background-image: url('images/image1.jpg');
+}
+
+body.background-2 {
+    background-image: url('images/image2.jpg');
+}
+
+body.background-3 {
+    background-image: url('images/image3.jpg');
+}
+
+/* contact */
+
+/* Background for Contact Page */
+body.background-contact {
+    background-image: url('images/contact1bg.jpg'); /* Replace with your contact background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Center items vertically */
+    max-width: 1000px; /* Max width of the container */
+    margin: 10px auto; /* Center the container */
+    padding: 1px; /* Add some padding */
+    background-color: rgba(1310, 756, 10, 0); /* Semi-transparent background for the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    margin-top: 200px;
+
+     /* Add some shadow for depth */
+}
+/* Form Styles */
+.contact-container h2 {
+    text-align: center;
+}
+
+.contact-container label {
+    display: block;
+    margin: 100px 0 5px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border: 1px solid #ff0000; /* Border for inputs */
+    border-radius: 50px; /* Rounded corners */
+    margin-bottom: 200px;
+    margin-top: 50px; /* Space between fields */
+}
+
+.contact-container button {
+    background-color: #d71e1e; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width for button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact-container button:hover {
+    background-color: #070415; /* Darker shade on hover */
+}
+.contact-container {
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: center; /* Center align items */
+    align-items: center; /* Center vertically */
+    padding: 1px; /* Padding around the container */
+}
+
+.contact-image {
+    flex: 1; /* Take up 50% of the space */
+    margin-right: 100px; /* Space between image and details */
+}
+
+.contact-image img {
+    width: 100%; /* Full width for the image */
+    border-radius: 10px;
+    margin-top: 1px ; /* Rounded corners */
+}
+
+.contact-details {
+    flex: 1; /* Take up 50% of the space */
+}
+
+.contact-details h2 {
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.contact-details h3 {
+    margin: 10px 0; /* Space above and below subheadings */
+}
+
+.contact-details p {
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+
+
+/* about */
+/* Background for About Page */
+body.background-about {
+    background-image: url('images/contactbg.jpg'); /* Replace with your about background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* About Container */
+.about-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width of the container */
+    margin: 50px auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the content */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}
+
+/* About Image */
+.about-image {
+    flex: 3; /* Make the image section take up one part */
+}
+
+.about-image img {
+    width: 100%; /* Full width */
+    border-radius: 10px; /* Rounded corners for image */
+}
+
+/* About Details */
+.about-details {
+    flex: 2; /* Make the details section take up two parts */
+    padding-left: 20px; /* Space between image and details */
+}
+
+.about-details h2 {
+    margin-bottom: 20px; /* Space below title */
+}
+
+.about-details p {
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.about-details ul {
+    list-style-type: disc; /* Bulleted list */
+    padding-left: 20px; /* Space from left */
+}
+
+.about-details li {
+    margin-bottom: 10px; /* Space between list items */
+}
+/* Slideshow Container */
+.slideshow-container {
+    position: relative; /* Position for absolute children */
+    max-width: 100%; /* Full width */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Hide all slides by default */
+.mySlides {
+    display: none; /* Hidden by default */
+}
+
+/* About Image in Slideshow */
+.about-image img {
+    width: 100%; /* Full width */
+    border-radius: 10px; /* Rounded corners for image */
+}
+
+
+/* footer */
+.social-media {
+    margin-top: 10px; /* Space above the icons */
+}
+
+.social-media img {
+    width: 30px; /* Set width for social media icons */
+    margin: 0 10px; /* Space between icons */
+    /* Make icons white */
+}
+.shop-now {
+    display: block;
+    margin: 1px auto;
+    width: 90px;
+    padding: 12px 30px;
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 18px; /* Font size */
+    text-align: center; /* Center text */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.shop-now:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+
+
+/* logo */
+/* Logo Styles */
+.logo {
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 15px; /* Font size */
+    color: #fff; /* Text color */
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center align */
+    padding: 10px 20px; /* Padding around the logo */
+    background-color: #333; /* Background color for the logo */
+    border-radius: 5px; /* Rounded corners for the background */
+}
+
+/* Adding responsiveness */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 24px; /* Smaller font size on smaller screens */
+    }
+}
+
+/* Quries For MObile Devives */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align */
+    }
+
+    .logo {
+        font-size: 24px; /* Smaller font size */
+        padding: 10px; /* Reduced padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical list */
+        margin: 10px 0; /* Spacing */
+    }
+
+    .search-bar {
+        flex-direction: column; /* Stack input and button */
+        margin: 20px 0; /* Spacing */
+    }
+
+    .search-bar input {
+        width: 100%; /* Full width */
+    }
+
+    .shop-now {
+        font-size: 16px; /* Smaller button size */
+        padding: 10px; /* Reduced padding */
+    }
+
+    footer {
+        font-size: 12px; /* Smaller footer text */
+    }
+}
+
+/* Quries For Tablets Devives */
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    nav ul {
+        flex-direction: row; /* Horizontal list */
+    }
+
+    .search-bar {
+        margin: 15px 0; /* Spacing */
+    }
+
+    .shop-now {
+        font-size: 18px; /* Adjust button size */
+    }
+}
+
+
+ /* Quries For PC and LAptops Devives  */
+ @media (min-width: 1025px) {
+    .logo {
+        font-size: 30px; /* Default font size */
+    }
+
+    header {
+        justify-content: space-between; /* Default layout */
+    }
+
+    .search-bar {
+        margin: 30px 0; /* Spacing */
+    }
+
+    .shop-now {
+        font-size: 15px; /* Default button size */
+    }
+}
+
+
+/* Quries For TV Devives */
+@media (max-width: 1920px) {
+    .logo {
+        font-size: 15px; /* Larger font size for TV */
+    }
+
+    header {
+        padding: 30px; /* More padding for header */
+    }
+
+    nav ul {
+        margin: 20px 0; /* Adjust spacing */
+    }
+
+    footer {
+        font-size: 14px; /* Larger footer text */
+    }
+}
+/* lauguage */
+.user-options {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    padding: 10px;
+    margin-left: 400px;
+}
+
+.user-button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.user-button:hover {
+    background-color: #555;
+}
+
+
+
+
+
