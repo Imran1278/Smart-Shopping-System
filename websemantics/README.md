@@ -45,8 +45,8 @@ Dr. Hafiz Faisal Shehzad — University of Sargodha
 - Licensed under MIT License.
 - Clean codebase with comments and instructions.
 
-### smart-shopping-system/
+## smart-shopping-system/
         └── websemantics/
             ├── index.html
             ├── README.md
-            └── smart-shopping-website.owl
+            └── smart-shopping-website.rdf
